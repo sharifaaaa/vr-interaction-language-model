@@ -1,1 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "VR Interaction as a Language-Like Sequence"
+version: 0.1-research
+date-released: 2026-01-11
+repository-code: "https://github.com/sharifaaaa/vr-interaction-language-model"
+license: MIT
+
+authors:
+  - family-names: Alaei
+    given-names: Sharifeh
+    affiliation: Sapienza University of Rome
+
+keywords:
+  - Virtual Reality
+  - Human-Computer Interaction
+  - Embodied Interaction
+  - Transformers
+  - Emotion Recognition
 
