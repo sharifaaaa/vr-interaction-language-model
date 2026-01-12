@@ -30,16 +30,18 @@ This work supports ongoing research in **Human–Computer Interaction (HCI)**, *
 
 ---
 
-repository_structure:
-  vr_transformer: "Transformer architectures for VR sequences"
-  config_*.py: "Experiment and model configurations"
-  preprocess_vr_data.py: "Preprocess raw VR logs into flattened CSVs"
-  main_emotionRecognition.py: "End-to-end training and evaluation pipeline"
-  train_pretrain.py: "Pretraining stage"
-  train_finetune.py: "Finetuning stage"
-  evaluate_only.py: "Model evaluation"
-  utils_labels.py: "Emotion label handling"
-  wilcoxon.py: "Statistical significance testing"
+## Repository Structure
+
+- `vr_transformer/` — Transformer architectures for VR interaction sequences  
+- `config_*.py` — Experiment and model configuration files  
+- `preprocess_vr_data.py` — Preprocess raw VR logs into flattened CSV representations  
+- `main_emotionRecognition.py` — End-to-end training and evaluation pipeline  
+- `train_pretrain.py` — Model pretraining stage  
+- `train_finetune.py` — Model finetuning stage  
+- `evaluate_only.py` — Model evaluation and inference  
+- `utils_labels.py` — Emotion label handling and mapping utilities  
+- `wilcoxon.py` — Statistical significance testing (Wilcoxon signed-rank test)
+
 
 
 
