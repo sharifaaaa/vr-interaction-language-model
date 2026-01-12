@@ -12,15 +12,14 @@ tasks such as emotion inference and cognitive state modeling.
 
 ## Repository Structure
 
-\## Repository Structure
-
-
-
-vr\_transformer/        # Transformer models for VR interaction
-
-config\_\*.py            # Experiment configurations
-
-classifier\_runner.py   # Model training and evaluation
-
+vr_transformer/                  # Transformer models for VR interaction
+config_*.py                      # Experiment configurations
+preprocess_vr_Data.py	           #preprocess raw json file and convert it a flattened CSV file
+main_emotionRecognition.py       # main pipeline
+train_pretrain.py                # Model training 
+train_finetune.py                # Model finetuning
+evaluate_only.py                 #Model evaluation
+util_labels.py                   #manging emotion labels
+wilcoxon.py		                   #Statistical tests
 
 
