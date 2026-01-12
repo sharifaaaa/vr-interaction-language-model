@@ -1,25 +1,93 @@
 # VR Interaction as a Language-Like Sequence
 
-This repository contains code for modeling embodied interaction in Virtual Reality (VR) as
-language-like sequential data, using Transformer-based architectures.
+This repository contains research code for modeling **embodied interaction in Virtual Reality (VR)** as **language-like sequential data**, using Transformer-based architectures.
 
-## Project Motivation
+The core idea is to treat continuous VR interaction logs (gaze, motion, actions) as structured temporal sequences, analogous to natural language, enabling downstream tasks such as **emotion recognition** and **cognitive state inference**.
 
-Human behavior in immersive environments unfolds over time through interaction.
-This project explores whether embodied VR interaction logs (gaze, motion, actions)
-can be treated as structured sequences, analogous to natural language, for downstream
-tasks such as emotion inference and cognitive state modeling.
+---
 
-## Repository Structure
+## Research Motivation
 
-vr_transformer/                  # Transformer models for VR interaction
-config_*.py                      # Experiment configurations
-preprocess_vr_Data.py	           #preprocess raw json file and convert it a flattened CSV file
-main_emotionRecognition.py       # main pipeline
-train_pretrain.py                # Model training 
-train_finetune.py                # Model finetuning
-evaluate_only.py                 #Model evaluation
-util_labels.py                   #manging emotion labels
-wilcoxon.py		                   #Statistical tests
+Human behavior in immersive environments unfolds over time through embodied interaction.  
+While most VR analytics rely on handcrafted features or static aggregation, this project explores whether **sequential modeling techniques from NLP** can be applied directly to **VR behavioral streams**.
+
+Key research questions:
+- Can VR interaction traces be treated as a tokenized sequence?
+- Do Transformer models capture temporal dependencies in embodied behavior?
+- How well can emotion states be inferred from non-verbal interaction alone?
+
+This work supports ongoing research in **Human–Computer Interaction (HCI)**, **XR**, and **affective computing**.
+
+---
+
+## Method Overview
+
+1. **Raw VR logs** (gaze, head, hand motion, events)  
+2. **Preprocessing & temporal chunking**
+3. **Feature projection into sequence representations**
+4. **Transformer-based modeling**
+5. **Emotion classification & statistical evaluation**
+
+---
+
+repository_structure:
+  vr_transformer: "Transformer architectures for VR sequences"
+  config_*.py: "Experiment and model configurations"
+  preprocess_vr_data.py: "Preprocess raw VR logs into flattened CSVs"
+  main_emotionRecognition.py: "End-to-end training and evaluation pipeline"
+  train_pretrain.py: "Pretraining stage"
+  train_finetune.py: "Finetuning stage"
+  evaluate_only.py: "Model evaluation"
+  utils_labels.py: "Emotion label handling"
+  wilcoxon.py: "Statistical significance testing"
+
+
+
+---
+
+## Data
+
+This repository includes **processed CSV files** used in experiments:
+
+- `chunked_vr_data.csv` – VR interaction sequences
+- `chunked_with_textProj.csv` – VR + text-projected features
+- `featureVector_original.csv` – Aggregated feature representation
+
+> ⚠️ Raw VR logs are not included for privacy and ethical reasons.
+
+---
+
+## Requirements
+
+- Python ≥ 3.9
+- PyTorch
+- NumPy
+- Pandas
+- scikit-learn
+
+---
+
+## Reproducibility Notes
+
+- Fixed temporal windowing and chunk size
+- Explicit configuration files
+- Deterministic data preprocessing
+- Clear separation of preprocessing, training, and evaluation
+
+This repository is intended for **research use**, not as a production system.
+
+---
+
+## Citation
+
+If you use this code in academic work, please cite it:
+
+```bibtex
+@software{Alaei_VRInteraction_2026,
+  title  = {VR Interaction as a Language-Like Sequence},
+  author = {Alaei, Sharifeh},
+  year   = {2026},
+  url    = {https://github.com/sharifaaaa/vr-interaction-language-model}
+}
 
 
