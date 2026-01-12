@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+
+# Data
+*.csv
+*.xlsx
+
+# Experiment outputs
+artifacts/
+ab_runs_positional/
+Captum_reports/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+*.pt
+Audio_Branch/
+*.db
+
+
+

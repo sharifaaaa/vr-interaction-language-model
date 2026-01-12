@@ -1,0 +1,7 @@
+digraph G {
+  rankdir=TB; node [shape=box, style=filled, fillcolor="#e6f2ff"];
+  "label_density.label_session_density" [label="label_session_density"];
+  "parsing_script.parse_json_to_dataframe" [label="parse_json_to_dataframe"];
+  "preprocess_vr_data.chunk_grouped_data" [label="chunk_grouped_data"];
+  "preprocess_vr_data.preprocess_and_tag_groups" [label="preprocess_and_tag_groups"];
+}
